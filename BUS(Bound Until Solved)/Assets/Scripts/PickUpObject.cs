@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
+    public float Damage = 10f;
     private Rigidbody rb;
 
     private void Awake()
@@ -36,4 +37,14 @@ public class PickUpObject : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         rb.AddForce(impulse, ForceMode.Impulse);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Enemy enemyObject = collision.gameObject.GetComponent<Enemy>();
+        if (enemyObject != null)
+        {
+            enemyObject.TakeDamage(Damage);
+        }
+    }
+
 }
