@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using TMPro;
 public class FPController : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -23,6 +23,7 @@ public class FPController : MonoBehaviour
     public float pickupRange = 3f;
     public Transform holdPoint;
     private PickUpObject heldObject;
+    public TMP_Text pickupText;
 
     [Header("Throw Settings")]
     public float throwForce = 10f;
@@ -52,6 +53,18 @@ public class FPController : MonoBehaviour
         {
             heldObject.MoveToHoldPoint(holdPoint.position);
         }
+
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
+        {
+            PickUpObject pickUp = hit.collider.GetComponent<PickUpObject>();
+            if (pickUp != null)
+            {
+                pickupText.text = pickUp.gameObject.name;
+                return;
+            }
+        }
+        pickupText.text = "";
     }
     public void OnMove(InputAction.CallbackContext context)
     {
