@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        Player = GameObject.FindGameObjectWithTag("Player").transform;
+
         if (Player == null)
         {
             Debug.LogError("No GameObject with tag 'Player' found at Start!");

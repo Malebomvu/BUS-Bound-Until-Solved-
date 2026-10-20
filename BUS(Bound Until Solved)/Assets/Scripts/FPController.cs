@@ -64,7 +64,7 @@ public class FPController : MonoBehaviour
                 return;
             }
         }
-        pickupText.text = "";
+        
     }
     public void OnMove(InputAction.CallbackContext context)
     {
