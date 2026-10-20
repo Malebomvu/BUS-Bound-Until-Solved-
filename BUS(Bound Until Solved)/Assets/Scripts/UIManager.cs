@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -41,4 +43,6 @@ public class UIManager : MonoBehaviour
             UIelement.SetActive(true);
         }
     }
+
+    
 }
