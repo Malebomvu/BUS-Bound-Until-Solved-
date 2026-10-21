@@ -5,13 +5,12 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class PauseScreenManager : MonoBehaviour
 {
     public GameObject pauseScreen;
-    public GameObject optionsScreen;
+    
     public Button resumeGameButton;
     public Button noButton;
     private bool paused;
@@ -19,7 +18,7 @@ public class PauseScreenManager : MonoBehaviour
 
     void Start()
     {
-        optionsScreen.SetActive(false);
+        
         pauseScreen.SetActive(false);
        
     }
@@ -56,7 +55,7 @@ public class PauseScreenManager : MonoBehaviour
         else
         {
             pauseScreen.SetActive(false);
-            optionsScreen.SetActive(false);
+           
             EventSystem.current.SetSelectedGameObject(null);
             Time.timeScale = 1;
         }
@@ -65,13 +64,13 @@ public class PauseScreenManager : MonoBehaviour
     public void Options()
     {
         otherMenu = true;
-        optionsScreen.SetActive(true);
+       
     }
 
     public void Back()
     {
         otherMenu = false;
-        optionsScreen.SetActive(false);
+       
         pauseScreen.SetActive(true);
         resumeGameButton.Select();
     }
@@ -81,17 +80,18 @@ public class PauseScreenManager : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()
-    {
-#if UNITY_EDITOR
+    { 
+ #if UNITY_EDITOR
         if(Application.isEditor)
         {
             UnityEditor.EditorApplication.isPlaying = false;    
         }
-#endif
+       
         else
         {
             Application.Quit();
         }
+#endif
     }
 
    public void UnPause()
