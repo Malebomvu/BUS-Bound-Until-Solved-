@@ -208,7 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &31264703
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10635,38 +10636,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &193064666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193064662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: cd4242a8e9a1bca41b9d4b19d68b66ce, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!82 &193064667
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20495,7 +20464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!1 &379192276
 GameObject:
   m_ObjectHideFlags: 0
@@ -20704,7 +20674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!64 &425215626
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20841,7 +20812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &429015798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21233,7 +21205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &438569828
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22354,7 +22327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &669666188
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31143,10 +31117,10 @@ GameObject:
   - component: {fileID: 687873203}
   - component: {fileID: 687873202}
   - component: {fileID: 687873201}
-  - component: {fileID: 687873207}
-  - component: {fileID: 687873206}
-  - component: {fileID: 687873205}
   - component: {fileID: 687873208}
+  - component: {fileID: 687873211}
+  - component: {fileID: 687873210}
+  - component: {fileID: 687873209}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -31243,64 +31217,12 @@ Transform:
   m_GameObject: {fileID: 687873200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.039, y: 5.52, z: -26.1}
+  m_LocalPosition: {x: -2.41, y: 4.14, z: -25.44}
   m_LocalScale: {x: 1.3518, y: 1.9388355, z: 1.3500468}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &687873205
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687873200}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &687873206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687873200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9937f788a0d806c4ea19adf9ce6ba5bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  health: 100
---- !u!114 &687873207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687873200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86b1dba107cd2554c836d5592f587312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  agent: {fileID: 687873205}
-  lookRadius: 40
-  Player: {fileID: 1843939197}
-  damage: 10
-  attackCooldown: 2
 --- !u!82 &687873208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31323,7 +31245,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 19.054218
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -31398,6 +31320,58 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!195 &687873209
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687873200}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &687873210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687873200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b1dba107cd2554c836d5592f587312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  agent: {fileID: 687873209}
+  lookRadius: 20
+  player: {fileID: 1843939197}
+--- !u!114 &687873211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687873200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9937f788a0d806c4ea19adf9ce6ba5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  maxHealth: 100
+  contactDamage: 10
+  damageInterval: 1
 --- !u!1 &695501733
 GameObject:
   m_ObjectHideFlags: 0
@@ -32051,7 +32025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: 0c82c181936a34c41bf961fd358925cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.06
+      value: 56.4
       objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: 0c82c181936a34c41bf961fd358925cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32633,10 +32607,10 @@ PrefabInstance:
       addedObject: {fileID: 193064663}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c82c181936a34c41bf961fd358925cd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 193064666}
+      addedObject: {fileID: 193064667}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c82c181936a34c41bf961fd358925cd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 193064667}
+      addedObject: {fileID: 729837897}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 0c82c181936a34c41bf961fd358925cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2115167389}
@@ -32796,6 +32770,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c82c181936a34c41bf961fd358925cd, type: 3}
   m_PrefabInstance: {fileID: 729837895}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &729837897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193064662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: a461d61b8365235428c6ceece5f90d7d, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &737027301
 GameObject:
   m_ObjectHideFlags: 0
@@ -33300,7 +33306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &808942803
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44827,7 +44834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &1335034442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -56625,8 +56633,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bc9e32ce6387ab4d8354da908d324b9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player
-  maxHealth: 80
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 100
 --- !u!1 &1865043365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4356877828898064976, guid: 0c82c181936a34c41bf961fd358925cd, type: 3}
@@ -56868,7 +56876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &1887814607
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -57272,7 +57281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804da6d8d9436b47be926e25c5e06fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  Damage: 10
+  player: {fileID: 0}
+  damage: 10
 --- !u!54 &1921078874
 Rigidbody:
   m_ObjectHideFlags: 0
