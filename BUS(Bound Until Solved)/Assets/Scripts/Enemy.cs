@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Contact Damage")]
     [SerializeField, Min(0f)]
-    private float contactDamage = 10f;
+    private int contactDamage = 10;
 
     [SerializeField, Min(0.05f)]
     private float damageInterval = 1f;

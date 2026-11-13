@@ -18,6 +18,17 @@ public class HudPause : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (isPaused)
+            { ResumeGame(); }
+            else
+            { PauseGame(); }
+        }
+    }
+
     public void PauseGame()
     {
         if (pauseMenu == null) return;

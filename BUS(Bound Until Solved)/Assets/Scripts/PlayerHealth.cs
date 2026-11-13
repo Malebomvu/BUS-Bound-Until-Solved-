@@ -3,31 +3,34 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField, Min(1f)]
-    public float maxHealth = 100f;
-    private float currentHealth;
-    private bool isDead;
+    public int maxHealth = 100;
+    private int currentHealth = 100;
+    public HUDManager hud;
 
-
-    private void Awake()
+    private void Start()
     {
         currentHealth = maxHealth;
+       
     }
-   
-    public void TakeDamage(float amaount)
-    {
-        if (isDead || amaount <= 0f) return;
-        currentHealth = Mathf.Max(0f, currentHealth - amaount);
-        Debug.Log($"Playerhealth: {currentHealth}/{maxHealth}", this);
 
-        if (currentHealth <= 0f)
+    public void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+        Debug.Log("Player took damage! Current health: " + currentHealth);
+
+        if (currentHealth <= 0)
         {
             Die();
         }
+        if (currentHealth < 0)
+            currentHealth = 0;
+        hud.SetHealth(currentHealth, maxHealth);
     }
+
     private void Die()
     {
-        isDead = true;
-        Debug.Log("You died!", this);
+        Debug.Log("Player has died!");
+        // Add respawn, game over, or animation here
     }
 }
+
